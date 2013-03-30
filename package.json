@@ -6,7 +6,10 @@
   "scripts": {
     "test": "node test/test-table.js"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sandfox/skynode.git"
+    },
   "keywords": [
     "sky",
     "skydb",
