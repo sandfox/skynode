@@ -1,0 +1,23 @@
+{
+  "name": "skynode",
+  "version": "0.0.0",
+  "description": "a node.js client for the sky behavioral database",
+  "main": "sky.js",
+  "scripts": {
+    "test": "node test/test-table.js"
+  },
+  "repository": "",
+  "keywords": [
+    "sky",
+    "skydb",
+    "client"
+  ],
+  "author": "sandfox",
+  "license": "MIT",
+  "dependencies": {
+    "request": "2.16.x"
+  },
+  "devDependencies" : {
+    "async": "0.2.6"
+  }
+}
