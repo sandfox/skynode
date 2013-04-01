@@ -139,6 +139,10 @@ Client.prototype.getTable = function(table, callback) {
 	this._get('/tables/' + table, callback);
 };
 
+Client.prototype.getTableStats = function(table, callback) {
+	this._get('/tables/' + table + '/stats', callback);
+};
+
 Client.prototype.createTable = function(table, callback) {
 	this._post('/tables', {name:table}, callback);
 };
