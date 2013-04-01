@@ -2,11 +2,23 @@
 
 A low level client for the [Sky](http://skydb.io/) database. Operates using the HTTP protocol.
 
-Currently very alpha and lacking tests and docs
+Currently very alpha and lacking tests and docs. Doesn't maintain any form of state and currently really have understanding of the data it's returned by the sky server. Designed largely for higher level clients to be built on top of it
+
+The api/naming/style is by no means fixed at this stage and is open to suggested changes or pull requests.
+
+## Stability Index
+
+Based up on [node.js stability index](http://nodejs.org/api/documentation.html#documentation_stability_index)
+
+__Stability: 1 - Experimental__
 
 ## Installation
 
 `npm install skynode`
+
+## Depenendecies
+
+The `request` module us currently used to make all HTTP requests. Nor particularly tied to it though.
 
 ## Usage
 
