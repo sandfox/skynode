@@ -1,6 +1,6 @@
 {
   "name": "skynode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a node.js client for the sky behavioral database",
   "main": "sky.js",
   "scripts": {

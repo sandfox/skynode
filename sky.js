@@ -201,7 +201,7 @@ Client.prototype.deleteEvent = function(timestamp, object, table, callback) {
 
 //	## Query
 Client.prototype.query = function(queryObj, table, callback) {
-	this_post('/tables/' + table + '/query', queryObj, callback)
+	this._post('/tables/' + table + '/query', queryObj, callback)
 };
 
 
