@@ -18,7 +18,7 @@ __Stability: 1 - Experimental__
 
 ## Depenendecies
 
-The `request` module us currently used to make all HTTP requests. Nor particularly tied to it though.
+The `request` module us currently used to make all HTTP requests. Not particularly tied to it though.
 
 ## Usage
 
@@ -126,14 +126,28 @@ client.addProperty(property, 'users-table', function(err, res){
 __Get a property__
 
 ```javascript
+client.getProperty('check', 'users-table', function(err, res){
+    console.log(res);
+    //{"id":2,"name":"check","transient":false,"dataType":"string"}
+})
 ```
+
 __Rename a property__
 
 ```javascript
+client.renameProperty('check', 'validated', 'users-table', function(err, res){
+    console.log(res);
+    //{"id":2,"name":"validated","transient":false,"dataType":"string"}
+})
 ```
+
 __Delete a property__
 
 ```javascript
+client.deleteProperty('validated', 'users-table', function(err, res){
+    console.log(res);
+    //`null`
+})
 ```
 ---------
 

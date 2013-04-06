@@ -5,25 +5,21 @@
 
 var assert = require('assert');
 var async = require('async');
-var skynode = require('../sky');
+var common = require('../common');
 
-var opts = {
-	host: 'localhost:8585'
-}
-var client = skynode.createClient(opts);
-
-
-var testPing = function(cb) {
-	client.ping(function(err, response){
-		assert(response.message, 'ok', "Could not ping server")
-		cb();
-	})
-}
+var client = common.createClient();
 
 var testCreateTable = function(cb) {
 
 	client.createTable('thetesttable', function(err, response){
-		assert(response.name, 'thetesttable', "could not create table 'thetesttable'");
+		assert(response.name, 'thetesttable');
+		cb()
+	})
+}
+
+var testTableStats = function(cb) {
+	client.getTableStats('thetesttable', function(err, response){
+		assert(response.count, 0);
 		cb()
 	})
 }
@@ -53,10 +49,10 @@ var testDeleteTable = function(cb) {
 }
 
 async.series([
-	testPing,
 	testCreateTable,
+	testTableStats,
 	testListTable,
 	testDeleteTable
 	], function(err, res){
-		console.log("done tests");
+		//console.log("done tests");
 	})

@@ -2,14 +2,14 @@
   "name": "skynode",
   "version": "0.0.2",
   "description": "a node.js client for the sky behavioral database",
-  "main": "sky.js",
+  "main": "skynode.js",
   "scripts": {
-    "test": "node test/test-table.js"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/sandfox/skynode.git"
-    },
+  },
   "keywords": [
     "sky",
     "skydb",
@@ -20,7 +20,10 @@
   "dependencies": {
     "request": "2.16.x"
   },
-  "devDependencies" : {
-    "async": "0.2.6"
+  "devDependencies": {
+    "async": "0.2.6",
+    "lodash": "~1.1.1",
+    "urun": "0.0.6",
+    "nock": "~0.17.2"
   }
 }

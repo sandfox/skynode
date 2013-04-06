@@ -1,0 +1,2 @@
+
+require('urun')(__dirname);

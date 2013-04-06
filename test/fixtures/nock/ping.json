@@ -1,0 +1,8 @@
+[
+  {
+    "method": "get",
+    "path": "/db_get",
+    "status": 200,
+    "response": "{ \"message\": 'ok' }"
+  }
+]
